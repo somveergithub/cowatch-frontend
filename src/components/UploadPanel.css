@@ -1,0 +1,176 @@
+.upload-panel {
+  padding: 1rem;
+  font-family: 'DM Mono', monospace;
+}
+
+.upload-label {
+  font-size: 0.68rem;
+  color: #6b7280;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.upload-dropzone {
+  border: 1.5px dashed rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+  background: rgba(255,255,255,0.02);
+}
+
+.upload-dropzone:hover,
+.upload-dropzone.dragging {
+  border-color: rgba(192,132,252,0.4);
+  background: rgba(192,132,252,0.05);
+}
+
+.upload-dropzone.has-file {
+  border-style: solid;
+  border-color: rgba(192,132,252,0.3);
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.upload-icon {
+  font-size: 1.5rem;
+  color: #4b5563;
+}
+
+.upload-placeholder p {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.upload-placeholder span {
+  font-size: 0.65rem;
+  color: #374151;
+}
+
+.upload-file-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.upload-file-icon {
+  font-size: 1.2rem;
+  color: #c084fc;
+}
+
+.upload-file-name {
+  font-size: 0.75rem;
+  color: #e5e7eb;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+.upload-file-size {
+  font-size: 0.65rem;
+  color: #6b7280;
+}
+
+.upload-error {
+  color: #f87171;
+  font-size: 0.72rem;
+  margin: 0.5rem 0 0;
+  letter-spacing: 0.03em;
+}
+
+.upload-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.upload-progress-bar {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.upload-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7c3aed, #c084fc);
+  border-radius: 2px;
+  transition: width 0.2s;
+}
+
+.upload-progress-text {
+  font-size: 0.68rem;
+  color: #c084fc;
+  min-width: 32px;
+  text-align: right;
+}
+
+.upload-confirming {
+  font-size: 0.72rem;
+  color: #a78bfa;
+  margin: 0.75rem 0 0;
+  letter-spacing: 0.05em;
+}
+
+.upload-btn {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.65rem;
+  background: linear-gradient(135deg, #7c3aed, #c084fc);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.upload-btn:hover { opacity: 0.85; }
+
+/* Done state */
+.upload-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 2rem 1rem;
+  color: #6b7280;
+}
+
+.upload-done-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(74,222,128,0.1);
+  border: 1px solid rgba(74,222,128,0.3);
+  color: #4ade80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.upload-done p {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.upload-done span {
+  font-size: 0.68rem;
+  color: #4b5563;
+}

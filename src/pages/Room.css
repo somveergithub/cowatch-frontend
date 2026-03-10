@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400&display=swap');
+
+.room {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #080810;
+  color: #f8f8ff;
+  overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.room-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  height: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(8,8,16,0.95);
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.room-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.room-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #c084fc;
+  letter-spacing: 0.1em;
+}
+
+.room-video-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  color: #4b5563;
+  letter-spacing: 0.05em;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room-header-center {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.room-conn-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+}
+
+.room-conn-dot.connected {
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade8088;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.room-conn-dot.disconnected { background: #f87171; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.room-conn-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: #4b5563;
+  letter-spacing: 0.08em;
+}
+
+.room-code-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: inherit;
+}
+
+.room-code-btn:hover {
+  background: rgba(192,132,252,0.08);
+  border-color: rgba(192,132,252,0.2);
+}
+
+.room-code {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  color: #c084fc;
+  letter-spacing: 0.2em;
+}
+
+.room-code-copy {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  color: #4b5563;
+  letter-spacing: 0.05em;
+}
+
+/* ── Body layout ─────────────────────────────────────────────── */
+.room-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Left: video */
+.room-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.75rem;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.room-player-wrap {
+  flex: 1;
+  min-height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Right: sidebar */
+.room-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(255,255,255,0.06);
+  overflow: hidden;
+}
+
+.room-sidebar-webcams {
+  height: 280px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.room-sidebar-chat {
+  flex: 1;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Loading */
+.room-loading {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #080810;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  color: #4b5563;
+  letter-spacing: 0.1em;
+}
+
+.room-loading-ring {
+  width: 40px; height: 40px;
+  border: 2px solid rgba(192,132,252,0.2);
+  border-top-color: #c084fc;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
